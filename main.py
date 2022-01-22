@@ -3,6 +3,7 @@ import aiohttp
 import revolt
 import io
 import typing
+import os
 
 from revolt.ext import commands
 
