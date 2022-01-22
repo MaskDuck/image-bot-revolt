@@ -3,8 +3,7 @@ import aiohttp
 import revolt
 import io
 import typing
-import os
-from keep_alive import keep_alive
+
 from revolt.ext import commands
 
 async def request(ctx, endpoint, params):
@@ -42,6 +41,5 @@ class Client(commands.CommandsClient):
 
 async def main():
     async with aiohttp.ClientSession() as session:
-        client = Client(session, os.environ['token'])
-        keep_alive()
+        client = Client(session, os.environ['revoltToken'])
         await client.start()
