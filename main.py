@@ -43,3 +43,5 @@ async def main():
     async with aiohttp.ClientSession() as session:
         client = Client(session, os.environ['revoltToken'])
         await client.start()
+
+asyncio.run(main())
